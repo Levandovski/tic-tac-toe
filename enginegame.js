@@ -1,4 +1,4 @@
-let optionsSelected = [];
+const optionsSelected = [];
 
 const conditionsForWinner = [
     ['card-1', 'card-2', 'card-3'],
@@ -19,7 +19,7 @@ let playerInit = "X";
 
 function engineGame(cardNumber, playerSimbol = playerInit) {
     playerInit = playerInit === "X" ? "O" : "X";
-    
+
     const divInner = document.getElementsByClassName(cardNumber);
 
     if (divInner[0].innerHTML !== "X" && divInner[0].innerHTML !== "O") {
@@ -30,7 +30,7 @@ function engineGame(cardNumber, playerSimbol = playerInit) {
         const goThroughMatriz = (contGoThrough) => {        
             const arrResult = [];
             for (let i = 0; i < conditionsForWinner[contGoThrough].length; i++) {
-                let resultFind = verifyWinner(playerSimbol, conditionsForWinner[contGoThrough][i]);
+                const resultFind = verifyWinner(playerSimbol, conditionsForWinner[contGoThrough][i]);
                 if (resultFind.length > 0) {
                     arrResult.push(resultFind[0]);
                 }
