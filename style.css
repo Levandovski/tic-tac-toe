@@ -1,21 +1,30 @@
+*{
+    padding: 0px;
+    margin: 0;    
+}
+
 body {
     background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 120, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 120, 1) 35%, rgba(0, 212, 255, 1) 100%); */ */
 }
 
 :root {
     --mobile: 360px;
-    --tablet: 768px;
-}
+    --tablet: 640px;
+    --desktopS: 768px;
+    --desktopL: 1086px;
+    --primary: #5f319c;
+    --secondary: #fff;
+  }
 
-/* @media only screen and (min-width: 768px) */
+/*mobile*/
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 500px;
+    height: 700px;   
 }
 
 .content {
@@ -24,8 +33,8 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;  
-    width: 500px;
-    height: auto;  
+    width: 270px;
+    height: auto;    
 }
 
 .card-1,
@@ -38,16 +47,113 @@ body {
 .card-8,
 .card-9 {
     margin-bottom: 25px;  
-    width: 150px;
-    height: 150px;  
+    width: 80px;
+    height: 80px;  
     background-color: #fff;
     cursor: pointer;
     color:#000;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size:100px;
+    font-size:50px;
     font-weight: bold;
     border:none;
 
 }
+
+/*tablet*/
+@media screen and (min-width: 640px){ 
+ 
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 700px;   
+    }
+    
+    .content {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+        width: 420px;
+        height: auto;    
+    }
+    
+    .card-1,
+    .card-2,
+    .card-3,
+    .card-4,
+    .card-5,
+    .card-6,
+    .card-7,
+    .card-8,
+    .card-9 {
+        margin-bottom: 25px;  
+        width: 130px;
+        height: 130px;  
+        background-color: #fff;
+        cursor: pointer;
+        color:#000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size:90px;
+        font-weight: bold;
+        border:none;
+    
+    }
+
+}
+/*desktopS*/
+@media screen and (min-width: 768px){
+   
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 700px;
+    }
+    
+    .content {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+        width: 500px;
+        height: auto;  
+    }
+
+    .card-1,
+    .card-2,
+    .card-3,
+    .card-4,
+    .card-5,
+    .card-6,
+    .card-7,
+    .card-8,
+    .card-9 {
+        margin-bottom: 25px;  
+        width: 150px;
+        height: 150px;  
+        background-color: #fff;
+        cursor: pointer;
+        color:#000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size:100px;
+        font-weight: bold;
+        border:none;
+    }
+}
+
+/*desktopL*/
+@media screen and (min-width: 1086px){}
+
